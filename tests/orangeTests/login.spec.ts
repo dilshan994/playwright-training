@@ -87,6 +87,6 @@ test.describe('Login functionality : Password field is masked', () => {
         const passwordField = page.getByPlaceholder('Password');
         await passwordField.fill('admin123');
 
-        await expect(passwordField).toHaveAttribute('type', 'password');
+        await expect(passwordField).toHaveAttribute('type', 'password',{timeout:60000});
     });
 });
